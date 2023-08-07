@@ -13,7 +13,7 @@ API Services Built on TOP of laravel 10 and sanctum.
 
 
 
-## Deployment
+## Installation
 
 To install this project follow below steps:
 
@@ -36,13 +36,26 @@ php artisan key:generate
 Setting up the database connection :
 
 ```bash
-  Setup database in .env file
+  Set the database in .env file
 ```
 
 Run the migrations :
 
 ```bash
-  php artisan migrate
+  php artisan migrate:fresh --seed 
+```
+
+OR Run the seed manually :
+
+```bash
+  php artisan db:seed
+```
+
+(Optional) Want to create dummy users list? :
+
+```bash
+  php artisan tinker
+  >App\Models\User::factory(100)->create(); //Hit enter
 ```
 
 Start the server : 
